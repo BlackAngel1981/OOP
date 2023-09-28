@@ -17,6 +17,15 @@ public class VendingMachine {
         }
         return null;
     }
-
+    public Chocolate getChocolate(String name, int calories) {
+        for (Product product : products){
+            if (product instanceof Chocolate){
+                Chocolate chocolate = (Chocolate)product;
+                if (chocolate.getName().equals(name) && chocolate.getCalories() == calories)
+                    return chocolate;
+            }
+        }
+        return null;
+    }
 
 }
